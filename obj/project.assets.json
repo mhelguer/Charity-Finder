@@ -7885,11 +7885,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj",
-      "projectName": "RazorPagesMovie",
-      "projectPath": "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\CharityFinder.csproj",
+      "projectName": "CharityFinder",
+      "projectPath": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\CharityFinder.csproj",
       "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\obj\\",
+      "outputPath": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",

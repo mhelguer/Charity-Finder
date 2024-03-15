@@ -321,3 +321,48 @@ USE DATATYPE ATTRIBUTES
 - bc added validation attribs, need to create a migration so schema in db is consistent with model class Movie.cs:
 Add-Migration New_DataAnnotations	// makes code file in Migrations folder to carry out changes in db
 Update-Database						// runs the Up function in aforementioned code file
+
+_____________________________________________________________________________________________________________________________
+api response path to Summary:
+projects/project/summary
+	- ex: Empowering Afghan women through the provision of education and training opportunities as well as basic health services
+<projects>
+	<project>
+		...
+		<summary>...</summary>
+to Countries:
+projects/project/countries/country/name
+	- ex: Afghanistan, India, United States
+<projects>
+	<project>
+		...
+		<organization>
+			...
+			<countries>
+				<country>
+					...
+					<name>Afghanistan</name>
+				</country>
+				<country>
+					...
+					<name>India<name>
+				<country>
+				<country>
+					...
+					<name>United States<name>
+				<country>
+			<countries>
+		</organization>
+
+to HomeCountry:
+<projects>
+	<project>
+		...
+		<contactCountry>United States</contactCountry>
+
+to Url:
+<projects>
+	<project>
+		<organization>
+			...
+			<url>http://www.sakena.org</url>

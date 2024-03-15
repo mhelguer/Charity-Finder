@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj": {}
+    "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\RazorPagesMovie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj": {
+    "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\RazorPagesMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\RazorPagesMovie.csproj",
         "projectName": "RazorPagesMovie",
-        "projectPath": "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj",
+        "projectPath": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\RazorPagesMovie.csproj",
         "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miguel\\source\\repos\\RazorPagesMovie\\obj\\",
+        "outputPath": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",

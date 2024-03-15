@@ -1,10 +1,83 @@
 ﻿@page
+@using CharityFinder.Pages
+@using CharityFinder.Models
+
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Charity Finder";
+    var themeModelObj = ViewData["ThemeModelObj"] as ThemeModel;
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="main-content text-center bg-dark">
+    <div class="jumbotron">
+        <h1 class="display-4" style="font-family: 'Oswald';">Charity Finder</h1>
+        <p class="lead">Discover the right destination for your donation!</p>
+    </div>
+
+    <div class="bg-dark p-4">
+        @if (themeModelObj != null)
+        {
+            // TODO: Set up Charity model to hold values from api
+            <form method="post" class="form-inline">
+                <div class="d-flex justify-content-around">
+                    <div class="text-center">
+                        <label for="SelectedTheme" class="d-block text-left text-white">Select a theme:</label>
+                        <select id="SelectedTheme" name="SelectedTheme" class="form-control">
+                            <option value="Any">Any</option>
+                            @foreach (var theme in themeModelObj.Themes.Theme)
+                            {
+                                <option value="@theme.Id">@theme.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <label for="themes2" class="d-block text-left text-white">Select a theme:</label>
+                        <select id="themes2" name="SelectedTheme2" class="form-control">
+                            <option value="Any">Any</option>
+                            @foreach (var theme in themeModelObj.Themes.Theme)
+                            {
+                                <option value="@theme.Id">@theme.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <label for="themes3" class="d-block text-left text-white">Select a theme:</label>
+                        <select id="themes3" name="SelectedTheme3" class="form-control">
+                            <option value="Any">Any</option>
+                            @foreach (var theme in themeModelObj.Themes.Theme)
+                            {
+                                <option value="@theme.Id">@theme.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </form>
+
+
+
+
+
+
+
+        }
+        else
+        {
+
+            <p class="lead" style="color: white">Unable to load themes.</p>
+        }
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
