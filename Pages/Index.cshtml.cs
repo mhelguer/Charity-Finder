@@ -13,15 +13,17 @@ namespace CharityFinder.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly ApiClient _apiClient;
         public string Data { get; set; }
 
         public ThemeModel ThemeModelObj { get; set; }
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, ApiClient apiClient)
         {
             _logger = logger;
+            _apiClient = apiClient;
         }
 
-        private readonly ApiClient _apiClient;
+
 
         [BindProperty]
         public string SelectedTheme { get; set; }
@@ -30,11 +32,11 @@ namespace CharityFinder.Pages
         public async Task OnPost()
         {
             string selectedTheme = SelectedTheme;
-            //FIXME: selectedTheme is correct, but _apiClient is null
             Console.WriteLine($"OnPost: {_apiClient}");
 
             var result = await _apiClient.GetData(selectedTheme);
 
+            // output all charities with selected theme
             Console.WriteLine(result);
         }
 
@@ -54,7 +56,6 @@ namespace CharityFinder.Pages
             Console.WriteLine("HELLO");
 
             // Pass ThemeModelObj to the view
-
             ViewData["ThemeModelObj"] = ThemeModelObj;
 
         }
@@ -88,12 +89,7 @@ namespace CharityFinder.Pages
                         Console.WriteLine(jsonContent);
 
                         ThemeModelObj = JsonConvert.DeserializeObject<ThemeModel>(jsonContent);
-                        Console.WriteLine("HELLO");
 
-                        //foreach (var theme in ThemeModelObj.Themes.Theme)
-                        //{
-                        //    Console.WriteLine(theme.Name);
-                        //}
                     }
                     catch (JsonReaderException ex)
                     {
@@ -108,12 +104,6 @@ namespace CharityFinder.Pages
                 }
             }
         }
-        //private static async Task Main(IndexModel indexModel)
-        //{
-        //    await indexModel.InitializeThemeModel();
-
-        //}
-
     }
 }
 
