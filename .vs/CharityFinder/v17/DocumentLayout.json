@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\charityfinder.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:charityfinder.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charityfinder\\models\\thememodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,97 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAADYAAAAAAAAAAAAcwEAAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-14T05:22:36.902Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAkwCEAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-14T05:23:03.139Z",
+              "DocumentIndex": 1,
+              "Title": "CharityFinder",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\CharityFinder.csproj",
+              "RelativeDocumentMoniker": "CharityFinder.csproj",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\CharityFinder.csproj",
+              "RelativeToolTip": "CharityFinder.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-17T19:18:44.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ThemeModel.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Models\\ThemeModel.cs",
+              "RelativeDocumentMoniker": "Models\\ThemeModel.cs",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Models\\ThemeModel.cs",
+              "RelativeToolTip": "Models\\ThemeModel.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAA1wAcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T18:02:50.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
               "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Pages\\Index.cshtml",
               "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABQAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-14T05:20:57.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-15T23:05:36.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Services\\ApiClient.cs",
-              "RelativeDocumentMoniker": "Services\\ApiClient.cs",
-              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Services\\ApiClient.cs",
-              "RelativeToolTip": "Services\\ApiClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T05:27:29.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAbAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAxwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T05:25:45.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ThemeModel.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Models\\ThemeModel.cs",
-              "RelativeDocumentMoniker": "Models\\ThemeModel.cs",
-              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Models\\ThemeModel.cs",
-              "RelativeToolTip": "Models\\ThemeModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T05:21:44.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "notes.txt",
               "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\notes.txt",
               "RelativeDocumentMoniker": "notes.txt",
@@ -140,21 +105,7 @@
               "RelativeToolTip": "notes.txt",
               "ViewState": "AQIAAD0BAAAAAAAAAADwv0YBAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-02-23T08:49:22.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\CharityFinder\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T08:51:35.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-23T08:49:22.496Z"
             }
           ]
         }
