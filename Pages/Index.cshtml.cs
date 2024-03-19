@@ -14,13 +14,15 @@ namespace CharityFinder.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly ApiClient _apiClient;
+        private readonly CharityService _charityService;
         public string Data { get; set; }
 
         public ThemeModel ThemeModelObj { get; set; }
-        public IndexModel(ILogger<IndexModel> logger, ApiClient apiClient)
+        public IndexModel(ILogger<IndexModel> logger, ApiClient apiClient, CharityService charityService)
         {
             _logger = logger;
             _apiClient = apiClient;
+            _charityService = charityService;
         }
 
 
@@ -34,10 +36,11 @@ namespace CharityFinder.Pages
             string selectedTheme = SelectedTheme;
             Console.WriteLine($"OnPost: {_apiClient}");
 
-            var result = await _apiClient.GetData(selectedTheme);
+            var result = await _apiClient.GetData(selectedTheme);   // result is string
 
+            var charities = await _charityService.GetCharitiesAsync(result);
             // output all charities with selected theme
-            Console.WriteLine(result);
+            Console.WriteLine(charities);
         }
 
         public async Task OnGetAsync()
@@ -48,10 +51,10 @@ namespace CharityFinder.Pages
             // Ensure ThemeModelObj is not null before accessing its properties
             if (ThemeModelObj != null)
             {
-                foreach (var theme in ThemeModelObj.Themes.Theme)
-                {
-                    Console.WriteLine($"Theme ID: {theme.Id}, Name: {theme.Name}");
-                }
+                //foreach (var theme in ThemeModelObj.Themes.Theme)
+                //{
+                //    Console.WriteLine($"Theme ID: {theme.Id}, Name: {theme.Name}");
+                //}
             }
             Console.WriteLine("HELLO");
 
@@ -86,7 +89,7 @@ namespace CharityFinder.Pages
                     {
                         string jsonContent = await response.Content.ReadAsStringAsync();
                         // Log the JSON content for debugging
-                        Console.WriteLine(jsonContent);
+                        // Console.WriteLine(jsonContent);
 
                         ThemeModelObj = JsonConvert.DeserializeObject<ThemeModel>(jsonContent);
 
