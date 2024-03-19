@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\",
+  "WorkspaceRootPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\fours\\source\\repos\\charity-finder\\services\\charityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:services\\charityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charity-finder\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\fours\\source\\repos\\charity-finder\\models\\charity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:models\\charity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\fours\\source\\repos\\charity-finder\\notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\fours\\source\\repos\\charity-finder\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\fours\\source\\repos\\charity-finder\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charity-finder\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\fours\\source\\repos\\charity-finder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charity-finder\\services\\charityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:services\\charityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charity-finder\\models\\charity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:models\\charity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charity-finder\\notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|c:\\users\\miguel\\source\\repos\\charity-finder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0578A592-60E5-452C-A067-40A013940D1B}|CharityFinder.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -48,21 +48,8 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Charity.cs",
-              "DocumentMoniker": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Models\\Charity.cs",
-              "RelativeDocumentMoniker": "Models\\Charity.cs",
-              "ToolTip": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Models\\Charity.cs",
-              "RelativeToolTip": "Models\\Charity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T06:11:33.575Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -70,67 +57,78 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Services\\ApiClient.cs",
-              "RelativeDocumentMoniker": "Services\\ApiClient.cs",
-              "ToolTip": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Services\\ApiClient.cs",
-              "RelativeToolTip": "Services\\ApiClient.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowB4AAAANAAAA",
+              "Title": "Charity.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Models\\Charity.cs",
+              "RelativeDocumentMoniker": "Models\\Charity.cs",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Models\\Charity.cs",
+              "RelativeToolTip": "Models\\Charity.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwAwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T04:51:36.827Z",
+              "WhenOpened": "2024-03-19T06:11:33.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CharityService.cs",
-              "DocumentMoniker": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Services\\CharityService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Services\\CharityService.cs",
               "RelativeDocumentMoniker": "Services\\CharityService.cs",
-              "ToolTip": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Services\\CharityService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Services\\CharityService.cs",
               "RelativeToolTip": "Services\\CharityService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBcAAAAPAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T03:07:54.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Pages\\Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAgwEQAAAAMAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAwwCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T05:25:45.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-19T19:31:01.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "notes.txt",
-              "DocumentMoniker": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\notes.txt",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\notes.txt",
               "RelativeDocumentMoniker": "notes.txt",
-              "ToolTip": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\notes.txt",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\notes.txt",
               "RelativeToolTip": "notes.txt",
               "ViewState": "AQIAAGcBAAAAAAAAAAAUwHABAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-02-23T08:49:22.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-23T08:49:22.496Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\fours\\source\\repos\\Charity-Finder\\Program.cs",
+              "ToolTip": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T04:59:08.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T04:59:08.986Z"
             }
           ]
         }

@@ -1,9 +1,8 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Xml.Linq;
-using Newtonsoft.Json;
+using System.Xml.Serialization;
 using CharityFinder.Models;
-using Newtonsoft.Json.Linq;
 
 namespace CharityFinder.Services
 {
@@ -16,51 +15,43 @@ namespace CharityFinder.Services
             _httpClient = httpClient;
         }
 
-        public async Task<List<Charity>> GetCharitiesAsync(string apiResponse)
-        {                   
-            //Console.WriteLine("in GetCharitiesAsync, apiResponse: "+ apiResponse);
-
-            Console.WriteLine("apiResponse: "+apiResponse);
-            try
-            {
-                JToken.Parse(apiResponse);
-                Console.WriteLine("apiREsponse parsed as json object");
-            }
-            catch (JsonReaderException ex)
-            {
-                Console.WriteLine("Error parsing apiResponse: " + ex.Message);
-            }
-
-
-            try
-            {
-                List<Charity> charities = ParseApiResponse(apiResponse);
-                foreach (Charity charity in charities)
-                {
-                    Console.WriteLine($"Name: {charity.Name}");
-                    Console.WriteLine($"Summary: {charity.Summary}");
-                    Console.WriteLine($"Countries Served: {string.Join(", ", charity.CountriesServed)}");
-                    Console.WriteLine($"Home Country: {charity.HomeCountry}");
-                    Console.WriteLine($"URL: {charity.Url}");
-                    Console.WriteLine();
-                }
-                Console.WriteLine("finished charities: " + charities);
-                return charities;
-            }
-            catch (JsonReaderException ex)
-            {
-                Console.WriteLine($"Error parsing JSON: {ex.Message}");
-                return null;
-            }
-
-        }
-
-        public List<Charity> ParseApiResponse(string apiResponse)
+        public List<Charity> GetCharities(string apiResponse)
         {
-            // deserialize json string into list of Charity objects
-            List<Charity> charities = JsonConvert.DeserializeObject<List<Charity>>(apiResponse);
+            List<Charity> charities = new List<Charity>();
+
+            // deserialize xml string into list of Charity objects
+            using (StringReader reader = new StringReader(apiResponse))
+            {
+                XDocument doc = XDocument.Load(reader);
+
+                foreach (XElement projectElement in doc.Descendants("project"))
+                {
+                    Charity charity = new Charity();
+
+                    // getting Name
+                    charity.Name = (string)projectElement.Element("organization")?.Element("name");
+
+                    // Summary
+                    charity.Summary = (string)projectElement.Element("summary");
+
+                    // HomeCountry
+                    charity.HomeCountry = (string)projectElement.Element("organization")
+                        ?.Element("country")
+                        ?.Element("name");
+
+                    // Url
+                    charity.Url = (string)projectElement.Element("organization")?.Element("url");
+
+                    // add charity to list of charities
+                    charities.Add(charity);
+
+                    // see output
+                    Console.WriteLine("adding charity " + charity.Name);
+                }
+            }
 
             return charities;
+
         }
     }
 }

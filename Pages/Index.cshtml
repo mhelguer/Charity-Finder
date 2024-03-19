@@ -6,6 +6,7 @@
 @{
     ViewData["Title"] = "Charity Finder";
     var themeModelObj = ViewData["ThemeModelObj"] as ThemeModel;
+    var CharitiesObj = ViewData["CharitiesObj"] as List<Charity>;
 
 }
 
@@ -18,7 +19,6 @@
     <div class="bg-dark p-4">
         @if (themeModelObj != null)
         {
-            // TODO: Set up Charity model to hold values from api
             <form method="post" class="form-inline">
                 <div class="d-flex justify-content-around">
                     <div class="text-center">
@@ -66,8 +66,20 @@
         }
         else
         {
-
-            <p class="lead" style="color: white">Unable to load themes.</p>
+            if (CharitiesObj == null)
+            {
+                <p>NO CHARITIES</p>
+            }
+            else{
+                @* TODO: style each charity into a card with GO button to their website *@
+                @foreach (Charity charity in CharitiesObj)
+                {
+                    <p>hi</p>
+                    <p style="color: white">@charity.Name</p>
+                    <p style="color: white">@charity.Summary</p>
+                    <br />
+                }
+            }            
         }
     </div>
 </div>
