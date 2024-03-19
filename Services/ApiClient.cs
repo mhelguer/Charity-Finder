@@ -15,7 +15,6 @@ namespace CharityFinder.Services
 
         public async Task<string> GetData(string selectedTheme)
         {
-            // FIXME: response not successful when using selectedTheme variable instead of hardcoding org theme edu
             // API Key
             string apiKey = "610ee8f9-bb17-4a64-97f6-99fb66929a19";
 
@@ -24,12 +23,11 @@ namespace CharityFinder.Services
             string operation = $"/public/projectservice/themes/{selectedTheme}";
             string queryString = $"api_key={apiKey}";
             string url = $"{baseUri}{operation}/projects/active/summary?api_key={apiKey}";
-            Console.WriteLine("url: "+url);
 
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
-                return await response.Content.ReadAsStringAsync();                
+                return await response.Content.ReadAsStringAsync();
             }
             else
             {

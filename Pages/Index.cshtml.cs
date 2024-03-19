@@ -18,6 +18,7 @@ namespace CharityFinder.Pages
         public string Data { get; set; }
 
         public ThemeModel ThemeModelObj { get; set; }
+        public List<Charity> CharitiesObj { get; set; }
         public IndexModel(ILogger<IndexModel> logger, ApiClient apiClient, CharityService charityService)
         {
             _logger = logger;
@@ -36,11 +37,17 @@ namespace CharityFinder.Pages
             string selectedTheme = SelectedTheme;
             Console.WriteLine($"OnPost: {_apiClient}");
 
-            var result = await _apiClient.GetData(selectedTheme);   // result is string
+            var apiResponse = await _apiClient.GetData(selectedTheme);   // result is string
 
-            var charities = await _charityService.GetCharitiesAsync(result);
+            CharitiesObj = _charityService.GetCharities(apiResponse);
+            // Pass ThemeModelObj to the view
+            ViewData["CharitiesObj"] = CharitiesObj;
+
             // output all charities with selected theme
-            Console.WriteLine(charities);
+            foreach (Charity charity in CharitiesObj)
+            {
+                Console.WriteLine(charity);
+            }
         }
 
         public async Task OnGetAsync()
