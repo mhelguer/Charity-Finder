@@ -15,11 +15,21 @@ namespace CharityFinder.Services
 
         public async Task<string> GetData(string selectedTheme)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync($"https://api.globalgiving.org/api/public/projectservice/themes/edu/projects/active?api_key=610ee8f9-bb17-4a64-97f6-99fb66929a19");
+            // FIXME: response not successful when using selectedTheme variable instead of hardcoding org theme edu
+            // API Key
+            string apiKey = "610ee8f9-bb17-4a64-97f6-99fb66929a19";
 
+            // URL
+            string baseUri = "https://api.globalgiving.org/api";
+            string operation = $"/public/projectservice/themes/{selectedTheme}";
+            string queryString = $"api_key={apiKey}";
+            string url = $"{baseUri}{operation}/projects/active/summary?api_key={apiKey}";
+            Console.WriteLine("url: "+url);
+
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
-                return await response.Content.ReadAsStringAsync();
+                return await response.Content.ReadAsStringAsync();                
             }
             else
             {

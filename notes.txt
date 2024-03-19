@@ -323,7 +323,14 @@ Add-Migration New_DataAnnotations	// makes code file in Migrations folder to car
 Update-Database						// runs the Up function in aforementioned code file
 
 _____________________________________________________________________________________________________________________________
-api response path to Summary:
+
+api response path to name:
+<projects>
+	<project>
+		<organization>
+			<name>
+
+to summary:
 projects/project/summary
 	- ex: Empowering Afghan women through the provision of education and training opportunities as well as basic health services
 <projects>

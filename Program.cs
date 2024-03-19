@@ -11,6 +11,7 @@ builder.Services.AddRazorPages();
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 
 builder.Services.AddHttpClient<ApiClient>();
+builder.Services.AddTransient<CharityService>();
 
 var app = builder.Build();
 
