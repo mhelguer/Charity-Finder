@@ -18,6 +18,10 @@ html {
     align-items: center;
 }
 
+.white-text {
+    color: white;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -26,26 +30,29 @@ html {
 body {
     padding: 0;
     margin: 0;
-    min-height: 100vh;
+    min-height: 60vh;
     background-color: orange;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
     position: relative;
 }
 
 .body-container {
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-    min-height: 100vh;
+    min-height: 90vh;
     height: 100%;
     margin-top: 0;
     width: 80%;
+    margin-bottom: 10rem;
 }
 
 main {
     height: 100vh;
     flex: 1;
+    margin-bottom: 100px;
 }
 
 .main-content {
@@ -58,6 +65,22 @@ main {
     color: white;
 }
 
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1rem;
+}
+
+.card-text {
+    text-align: left;
+}
+
+.btn-primary {
+    max-height: 5rem;
+    max-width: 15rem;
+    overflow: hidden;
+}
 
 footer {
     background-color: gray;

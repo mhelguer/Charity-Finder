@@ -42,12 +42,6 @@ namespace CharityFinder.Pages
             CharitiesObj = _charityService.GetCharities(apiResponse);
             // Pass ThemeModelObj to the view
             ViewData["CharitiesObj"] = CharitiesObj;
-
-            // output all charities with selected theme
-            foreach (Charity charity in CharitiesObj)
-            {
-                Console.WriteLine(charity);
-            }
         }
 
         public async Task OnGetAsync()
