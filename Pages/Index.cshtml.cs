@@ -26,37 +26,21 @@ namespace CharityFinder.Pages
             _charityService = charityService;
         }
 
-
-
         [BindProperty]
         public string SelectedTheme { get; set; }
         public string SelectedCountry { get; set; }
 
         public async Task OnPost()
         {
+            // TODO: make pressing Submit button move to Results page with Charities object
             string selectedTheme = SelectedTheme;
             string selectedCountry = SelectedCountry;
 
-            //if (SelectedCountry == "Any")
-            //{
-            //    var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
-            //}
-            //else if (selectedTheme == "Any" && SelectedCountry != "Any")
-            //{
-            //    var apiResponse = await _apiClient.GetDataByCountry(SelectedCountry);
-            //}
-            //else if (selectedTheme == "Any" && selectedCountry == "Any")
-            //{
-            //    var apiResponse = await _apiClient.GetAnyData();
-            //}
             if (selectedTheme == "Any")
             {
                 var apiResponse = await _apiClient.GetAnyData();
                 Console.WriteLine(apiResponse);
                 CharitiesObj = _charityService.GetCharities(apiResponse);
-
-
-
             }
             else
             {
@@ -64,8 +48,6 @@ namespace CharityFinder.Pages
                 CharitiesObj = _charityService.GetCharities(apiResponse);
 
             }
-
-
 
             // Pass ThemeModelObj to the view
             ViewData["CharitiesObj"] = CharitiesObj;
@@ -76,10 +58,10 @@ namespace CharityFinder.Pages
             Data = "some data";
             await InitializeThemeModel();
 
-            foreach (var theme in ThemeModelObj.Themes.Theme)
-            {
-                Console.WriteLine(theme.Name);
-            }
+            //foreach (var theme in ThemeModelObj.Themes.Theme)
+            //{
+            //    Console.WriteLine(theme.Id);
+            //}
 
             // Pass ThemeModelObj to the view
             ViewData["ThemeModelObj"] = ThemeModelObj;
