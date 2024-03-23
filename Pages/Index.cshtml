@@ -32,13 +32,15 @@
                         </select>
                     </div>
                     <div class="text-center">
-                        <label for="themes2" class="d-block text-left text-white">Select a theme:</label>
-                        <select id="themes2" name="SelectedTheme2" class="form-control">
+                        <label for="region" class="d-block text-left text-white">Select a region:</label>
+                        <select id="region" name="SelectedRegion" class="form-control">
                             <option value="Any">Any</option>
-                            @foreach (var theme in themeModelObj.Themes.Theme)
-                            {
-                                <option value="@theme.Id">@theme.Name</option>
-                            }
+                            <option value="Africa">Africa</option>
+                            <option value="Asia and Oceania">Asia and Oceania</option>
+                            <option value="Europe and Russia">Europe and Russia</option>
+                            <option value="Middle East">Middle East</option>
+                            <option value="North America">North America</option>
+                            <option value="South/Central America and the Caribbean">South/Central America and the Caribbean</option>                            
                         </select>
                     </div>
                     <div class="text-center">
