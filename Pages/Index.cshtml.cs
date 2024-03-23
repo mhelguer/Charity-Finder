@@ -30,24 +30,45 @@ namespace CharityFinder.Pages
 
         [BindProperty]
         public string SelectedTheme { get; set; }
-
+        public string SelectedCountry { get; set; }
 
         public async Task OnPost()
         {
             string selectedTheme = SelectedTheme;
-            Console.WriteLine($"OnPost: {_apiClient}");
+            string selectedCountry = SelectedCountry;
 
-            var apiResponse = await _apiClient.GetData(selectedTheme);   // result is string
+            //if (SelectedCountry == "Any")
+            //{
+            //    var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
+            //}
+            //else if (selectedTheme == "Any" && SelectedCountry != "Any")
+            //{
+            //    var apiResponse = await _apiClient.GetDataByCountry(SelectedCountry);
+            //}
+            //else if (selectedTheme == "Any" && selectedCountry == "Any")
+            //{
+            //    var apiResponse = await _apiClient.GetAnyData();
+            //}
+            if (selectedTheme == "Any")
+            {
+                var apiResponse = await _apiClient.GetAnyData();
+                Console.WriteLine(apiResponse);
+                CharitiesObj = _charityService.GetCharities(apiResponse);
 
-            CharitiesObj = _charityService.GetCharities(apiResponse);
+
+
+            }
+            else
+            {
+                var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
+                CharitiesObj = _charityService.GetCharities(apiResponse);
+
+            }
+
+
+
             // Pass ThemeModelObj to the view
             ViewData["CharitiesObj"] = CharitiesObj;
-
-            // output all charities with selected theme
-            foreach (Charity charity in CharitiesObj)
-            {
-                Console.WriteLine(charity);
-            }
         }
 
         public async Task OnGetAsync()
@@ -55,15 +76,10 @@ namespace CharityFinder.Pages
             Data = "some data";
             await InitializeThemeModel();
 
-            // Ensure ThemeModelObj is not null before accessing its properties
-            if (ThemeModelObj != null)
+            foreach (var theme in ThemeModelObj.Themes.Theme)
             {
-                //foreach (var theme in ThemeModelObj.Themes.Theme)
-                //{
-                //    Console.WriteLine($"Theme ID: {theme.Id}, Name: {theme.Name}");
-                //}
+                Console.WriteLine(theme.Name);
             }
-            Console.WriteLine("HELLO");
 
             // Pass ThemeModelObj to the view
             ViewData["ThemeModelObj"] = ThemeModelObj;
