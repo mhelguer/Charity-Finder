@@ -1,6 +1,7 @@
-﻿@using CharityFinder.Pages
-@using CharityFinder.Models
+﻿@page
 
+@using CharityFinder.Pages
+@using CharityFinder.Models
 @model ResultsModel
 @{
     ViewData["Title"] = "Charity Finder";
@@ -10,7 +11,7 @@
 
 <div class="main-content text-center bg-dark">
     <div class="jumbotron">
-        <button href="/" class="btn btn-primary">Homse</button>
+        <button href="/" class="btn btn-primary">Home</button>
         <h1 class="display-4" style="font-family: 'Oswald';">Charity Finder</h1>
         <p class="lead">Discover the right destination for your donation!</p>
     </div>
@@ -18,7 +19,6 @@
     <div class="bg-dark p-4">
         @if (CharitiesObj != null)
         {
-            @* TODO: style each charity into a card with GO button to their website *@
             <div class="card-grid">
                 @foreach (Charity charity in CharitiesObj)
                 {
@@ -37,7 +37,7 @@
         }
         else
         {
-            <p>NO CHARITIES</p>
+            <p class="white-text">NO CHARITIES</p>
         }
     </div>
 </div>
