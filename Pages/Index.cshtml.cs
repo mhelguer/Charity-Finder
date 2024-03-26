@@ -12,16 +12,14 @@ namespace CharityFinder.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
         private readonly ApiClient _apiClient;
         private readonly CharityService _charityService;
         public string Data { get; set; }
 
         public ThemeModel ThemeModelObj { get; set; }
         public List<Charity> CharitiesObj { get; set; }
-        public IndexModel(ILogger<IndexModel> logger, ApiClient apiClient, CharityService charityService)
+        public IndexModel(ApiClient apiClient, CharityService charityService)
         {
-            _logger = logger;
             _apiClient = apiClient;
             _charityService = charityService;
         }
@@ -30,27 +28,31 @@ namespace CharityFinder.Pages
         public string SelectedTheme { get; set; }
         public string SelectedCountry { get; set; }
 
-        public async Task OnPost()
+        public async Task<IActionResult> OnPost()
         {
-            // TODO: make pressing Submit button move to Results page with Charities object
             string selectedTheme = SelectedTheme;
             string selectedCountry = SelectedCountry;
-
             if (selectedTheme == "Any")
             {
                 var apiResponse = await _apiClient.GetAnyData();
-                Console.WriteLine(apiResponse);
                 CharitiesObj = _charityService.GetCharities(apiResponse);
+
+                TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
             }
             else
             {
                 var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
                 CharitiesObj = _charityService.GetCharities(apiResponse);
+                TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
+
 
             }
 
+            Console.WriteLine("REDIRECTING");
+            // FIXME: asp-page="Results" redirects to Results.cshtml but without charitiesobj, but this redirects to Results route but blank white page
+            return RedirectToPage("/Results");
             // Pass ThemeModelObj to the view
-            ViewData["CharitiesObj"] = CharitiesObj;
+            //ViewData["CharitiesObj"] = CharitiesObj;
         }
 
         public async Task OnGetAsync()

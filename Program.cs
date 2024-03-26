@@ -2,6 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using CharityFinder.Models;
 using CharityFinder.Services;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,5 +37,10 @@ app.UseRouting();           // adds route-matching to middleware pipeline
 app.UseAuthorization();     // authorizes user to access secure resources
 
 app.MapRazorPages();        // sets up endpoint routing for Razor pages
+
+app.MapGet("/Results", async context =>
+{
+
+});
 
 app.Run();
