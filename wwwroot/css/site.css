@@ -27,6 +27,7 @@ html {
     min-height: 100%;
 }
 
+/*FIXME: body too much height, make it so browser doesn't need scroll on Index and height only increases if Results page needs more height for charities' info*/
 body {
     padding: 0;
     margin: 0;
@@ -42,11 +43,11 @@ body {
 
 .body-container {
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-    min-height: 90vh;
+    /*min-height: 90vh;*/
     height: 100%;
     margin-top: 0;
     width: 80%;
-    margin-bottom: 10rem;
+    margin-bottom: 6em;
 }
 
 main {
@@ -56,7 +57,7 @@ main {
 }
 
 .main-content {
-    height: 100vh;
+    height: 95vh;
     min-width: 90vw;
 }
 
@@ -96,4 +97,5 @@ footer {
 
 .footer-container {
     color: white;
+    margin-top: auto;
 }

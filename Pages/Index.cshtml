@@ -11,8 +11,9 @@
 }
 
 <div class="main-content text-center bg-dark">
+
     <div class="jumbotron">
-        <button href="/" class="btn btn-primary">Home</button>
+        @* <a asp-page="/Index" class="btn btn-primary">Home</a> *@
         <h1 class="display-4" style="font-family: 'Oswald';">Charity Finder</h1>
         <p class="lead">Discover the right destination for your donation!</p>
     </div>
@@ -56,7 +57,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-3">
-                    <input type="submit" value="Submit" class="btn btn-primary" asp-area="" asp-page="Results" />
+                    <input type="submit" value="Submit" class="btn btn-primary" @* asp-area="" asp-page="Results" *@ />
                 </div>
             </form>
         }

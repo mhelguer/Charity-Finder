@@ -11,9 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-//builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
-
 builder.Services.AddHttpClient<ApiClient>();
 builder.Services.AddTransient<CharityService>();
 
@@ -31,16 +28,12 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();  // HTTP requests -> HTTPS
 app.UseStaticFiles();       // enables use of static(html, css, images, js) files
-
 app.UseRouting();           // adds route-matching to middleware pipeline
-
 app.UseAuthorization();     // authorizes user to access secure resources
-
-app.MapRazorPages();        // sets up endpoint routing for Razor pages
-
-app.MapGet("/Results", async context =>
+app.MapGet("/", context =>
 {
-
+    context.Response.Redirect("/Index");
+    return Task.CompletedTask;
 });
-
+app.MapRazorPages();        // sets up endpoint routing for Razor pages
 app.Run();

@@ -26,17 +26,16 @@ namespace CharityFinder.Pages
 
         [BindProperty]
         public string SelectedTheme { get; set; }
-        public string SelectedCountry { get; set; }
+        public string SelectedRegion { get; set; }
 
         public async Task<IActionResult> OnPost()
         {
             string selectedTheme = SelectedTheme;
-            string selectedCountry = SelectedCountry;
+            string selectedRegion = SelectedRegion;
             if (selectedTheme == "Any")
             {
                 var apiResponse = await _apiClient.GetAnyData();
                 CharitiesObj = _charityService.GetCharities(apiResponse);
-
                 TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
             }
             else
@@ -48,11 +47,10 @@ namespace CharityFinder.Pages
 
             }
 
+            // Console.WriteLine(TempData["CharitiesObj"]); // correct
             Console.WriteLine("REDIRECTING");
-            // FIXME: asp-page="Results" redirects to Results.cshtml but without charitiesobj, but this redirects to Results route but blank white page
             return RedirectToPage("/Results");
-            // Pass ThemeModelObj to the view
-            //ViewData["CharitiesObj"] = CharitiesObj;
+
         }
 
         public async Task OnGetAsync()
