@@ -10,7 +10,6 @@ namespace CharityFinder.Pages
         public List<Charity> CharitiesObj { get; set; }
         public void OnGet()
         {
-            Console.WriteLine("HI");
 
             var charitiesJson = TempData["CharitiesObj"] as string;
             Console.WriteLine(charitiesJson);

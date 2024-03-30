@@ -26,29 +26,45 @@ namespace CharityFinder.Pages
 
         [BindProperty]
         public string SelectedTheme { get; set; }
+        [BindProperty]
         public string SelectedRegion { get; set; }
 
         public async Task<IActionResult> OnPost()
         {
             string selectedTheme = SelectedTheme;
             string selectedRegion = SelectedRegion;
-            if (selectedTheme == "Any")
+
+            // search for random projects
+            if (selectedTheme == "Any" && selectedRegion == "Any")
             {
                 var apiResponse = await _apiClient.GetAnyData();
                 CharitiesObj = _charityService.GetCharities(apiResponse);
                 TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
             }
-            else
+            // search based on only theme
+            else if (selectedTheme != "Any" && selectedRegion == "Any")
             {
                 var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
                 CharitiesObj = _charityService.GetCharities(apiResponse);
                 TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
-
-
+            }
+            // search when only region is chosen, or when theme and region is chosen (same method)
+            else
+            {
+                if (selectedTheme == "Any")
+                {
+                    var apiResponse = await _apiClient.GetDataBySearch(selectedRegion);
+                    CharitiesObj = _charityService.GetCharities(apiResponse);
+                    TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
+                }
+                else
+                {
+                    var apiResponse = await _apiClient.GetDataBySearch(selectedRegion, selectedTheme);
+                    CharitiesObj = _charityService.GetCharities(apiResponse);
+                    TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
+                }
             }
 
-            // Console.WriteLine(TempData["CharitiesObj"]); // correct
-            Console.WriteLine("REDIRECTING");
             return RedirectToPage("/Results");
 
         }
@@ -57,11 +73,6 @@ namespace CharityFinder.Pages
         {
             Data = "some data";
             await InitializeThemeModel();
-
-            //foreach (var theme in ThemeModelObj.Themes.Theme)
-            //{
-            //    Console.WriteLine(theme.Id);
-            //}
 
             // Pass ThemeModelObj to the view
             ViewData["ThemeModelObj"] = ThemeModelObj;
@@ -93,15 +104,11 @@ namespace CharityFinder.Pages
                     try
                     {
                         string jsonContent = await response.Content.ReadAsStringAsync();
-                        // Log the JSON content for debugging
-                        // Console.WriteLine(jsonContent);
-
                         ThemeModelObj = JsonConvert.DeserializeObject<ThemeModel>(jsonContent);
 
                     }
                     catch (JsonReaderException ex)
                     {
-                        // Log the exception for debugging
                         Console.WriteLine(ex);
                         ThemeModelObj = null;
                     }
