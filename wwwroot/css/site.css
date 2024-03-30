@@ -44,16 +44,14 @@ body {
 .body-container {
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
     /*min-height: 90vh;*/
-    height: 100%;
     margin-top: 0;
     width: 80%;
-    margin-bottom: 6em;
+    margin-bottom: 0;
 }
 
 main {
-    height: 100vh;
+    height: 90vh;
     flex: 1;
-    margin-bottom: 100px;
 }
 
 .main-content {
@@ -61,6 +59,9 @@ main {
     min-width: 90vw;
 }
 
+.results {
+    padding-bottom: 4rem !important;
+}
 
 .jumbotron {
     color: white;
@@ -97,5 +98,5 @@ footer {
 
 .footer-container {
     color: white;
-    margin-top: auto;
+    margin-top: 0;
 }

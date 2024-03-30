@@ -40,17 +40,22 @@ namespace CharityFinder.Services
             }
         }
 
-        public async Task<string> GetDataByCountry(string selectedCountry)
+
+        public async Task<string> GetDataBySearch(string selectedRegion, string selectedTheme = "")
         {
+            Console.WriteLine("IN SEARCH METHOD");
+            Console.WriteLine("REGION IS " + selectedRegion);
+
+            selectedRegion = selectedRegion.Replace(" ", "+");
             // API Key
             string apiKey = "610ee8f9-bb17-4a64-97f6-99fb66929a19";
 
             // URL
             string baseUri = "https://api.globalgiving.org/api";
-            string operation = $"/public/projectservice/countries/{selectedCountry}";
-            string queryString = $"api_key={apiKey}";
-            string url = $"{baseUri}{operation}/projects/active/summary?api_key={apiKey}";
-
+            string operation = $"/public/services/search/projects";
+            string queryString = $"?api_key={apiKey}&q={selectedRegion}+{selectedTheme}";
+            string url = $"{baseUri}{operation}{queryString}";
+            Console.WriteLine(url + ".");
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {

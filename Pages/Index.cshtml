@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "Charity Finder";
     var themeModelObj = ViewData["ThemeModelObj"] as ThemeModel;
-    var CharitiesObj = ViewData["CharitiesObj"] as List<Charity>;
+    // var CharitiesObj = ViewData["CharitiesObj"] as List<Charity>;
 
 }
 
@@ -33,9 +33,10 @@
                             }
                         </select>
                     </div>
+                    
                     <div class="text-center">
-                        <label for="region" class="d-block text-left text-white">Select a region:</label>
-                        <select id="region" name="SelectedRegion" class="form-control">
+                        <label for="SelectedRegion" class="d-block text-left text-white">Select a region:</label>
+                        <select id="SelectedRegion" name="SelectedRegion" class="form-control">
                             <option value="Any">Any</option>
                             <option value="Africa">Africa</option>
                             <option value="Asia and Oceania">Asia and Oceania</option>
@@ -45,7 +46,7 @@
                             <option value="South/Central America and the Caribbean">South/Central America and the Caribbean</option>                            
                         </select>
                     </div>
-                    <div class="text-center">
+                    @* <div class="text-center">
                         <label for="themes3" class="d-block text-left text-white">Select a theme:</label>
                         <select id="themes3" name="SelectedTheme3" class="form-control">
                             <option value="Any">Any</option>
@@ -54,10 +55,10 @@
                                 <option value="@theme.Id">@theme.Name</option>
                             }
                         </select>
-                    </div>
+                    </div> *@
                 </div>
                 <div class="text-center mt-3">
-                    <input type="submit" value="Submit" class="btn btn-primary" @* asp-area="" asp-page="Results" *@ />
+                    <input type="submit" value="Submit" class="btn btn-primary" />
                 </div>
             </form>
         }
