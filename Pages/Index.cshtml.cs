@@ -7,6 +7,7 @@ using System;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using CharityFinder.Models;
 using CharityFinder.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace CharityFinder.Pages
 {
@@ -14,14 +15,16 @@ namespace CharityFinder.Pages
     {
         private readonly ApiClient _apiClient;
         private readonly CharityService _charityService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         public string Data { get; set; }
 
         public ThemeModel ThemeModelObj { get; set; }
         public List<Charity> CharitiesObj { get; set; }
-        public IndexModel(ApiClient apiClient, CharityService charityService)
+        public IndexModel(ApiClient apiClient, CharityService charityService, IHttpContextAccessor httpContextAccessor)
         {
             _apiClient = apiClient;
             _charityService = charityService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [BindProperty]
@@ -37,9 +40,11 @@ namespace CharityFinder.Pages
             // search for random projects
             if (selectedTheme == "Any" && selectedRegion == "Any")
             {
+                // get charities and store as string in session
                 var apiResponse = await _apiClient.GetAnyData();
                 CharitiesObj = _charityService.GetCharities(apiResponse);
-                TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
+                var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+                _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
             }
             // search based on only theme
             else if (selectedTheme != "Any" && selectedRegion == "Any")

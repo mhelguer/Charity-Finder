@@ -13,6 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient<ApiClient>();
 builder.Services.AddTransient<CharityService>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -29,7 +31,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();  // HTTP requests -> HTTPS
 app.UseStaticFiles();       // enables use of static(html, css, images, js) files
 app.UseRouting();           // adds route-matching to middleware pipeline
+app.UseSession();
 app.UseAuthorization();     // authorizes user to access secure resources
+
 app.MapGet("/", context =>
 {
     context.Response.Redirect("/Index");
