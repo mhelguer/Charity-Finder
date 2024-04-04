@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kpCVL2xJDW9YhN0Yg52R97IYrTImbwMJnrWa5445XOc=",
+  "Hash": "dRs8XNXUl6AxVajasckS8iD+RH3A2RCdJWx4KX7YXsI=",
   "Source": "CharityFinder",
   "BasePath": "_content/CharityFinder",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CharityFinder.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\charity.jpg",
+      "SourceId": "CharityFinder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\",
+      "BasePath": "_content/CharityFinder",
+      "RelativePath": "charity.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\charity.jpg"
     },
     {
       "Identity": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\css\\site.css",
@@ -1193,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\relief.jpg",
+      "SourceId": "CharityFinder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\",
+      "BasePath": "_content/CharityFinder",
+      "RelativePath": "relief.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\relief.jpg"
     }
   ]
 }
