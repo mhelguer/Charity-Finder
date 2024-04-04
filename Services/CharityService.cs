@@ -46,7 +46,7 @@ namespace CharityFinder.Services
                     charities.Add(charity);
 
                     // see output
-                    Console.WriteLine("adding charity " + charity.Name);
+                    // Console.WriteLine("adding charity " + charity.Name);
                 }
             }
 
