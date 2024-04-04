@@ -76,12 +76,8 @@ namespace CharityFinder.Pages
 
         public async Task OnGetAsync()
         {
-            Data = "some data";
             await InitializeThemeModel();
-
-            // Pass ThemeModelObj to the view
             ViewData["ThemeModelObj"] = ThemeModelObj;
-
         }
 
 

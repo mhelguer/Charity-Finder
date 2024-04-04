@@ -43,9 +43,6 @@ namespace CharityFinder.Services
 
         public async Task<string> GetDataBySearch(string selectedRegion, string selectedTheme = "")
         {
-            Console.WriteLine("IN SEARCH METHOD");
-            Console.WriteLine("REGION IS " + selectedRegion);
-
             selectedRegion = selectedRegion.Replace(" ", "+");
             // API Key
             string apiKey = "610ee8f9-bb17-4a64-97f6-99fb66929a19";
@@ -60,7 +57,6 @@ namespace CharityFinder.Services
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadAsStringAsync();
-
             }
             else
             {
@@ -70,7 +66,6 @@ namespace CharityFinder.Services
 
         public async Task<string> GetAnyData()
         {
-            // themes
             string[] themes = {
                 "animals",
                 "children",
