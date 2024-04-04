@@ -27,7 +27,6 @@ html {
     min-height: 100%;
 }
 
-/*FIXME: body too much height, make it so browser doesn't need scroll on Index and height only increases if Results page needs more height for charities' info*/
 body {
     padding: 0;
     margin: 0;
@@ -42,11 +41,15 @@ body {
 }
 
 .body-container {
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
     /*min-height: 90vh;*/
     margin-top: 0;
     width: 80%;
     margin-bottom: 0;
+}
+
+.menu-section {
+    width: 100%;
 }
 
 main {
@@ -57,16 +60,50 @@ main {
 .main-content {
     height: 95vh;
     min-width: 90vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+.jumbotron {
+    color: white;
+    flex: 0 0 auto;
+}
+
+.hero-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-section {
+    width: 100%;
+    height: 100%;
+}
+
+
+#charityImage {
+    height: 20rem;
+    width: auto;
 }
 
 .results {
     padding-bottom: 4rem !important;
 }
-
-.jumbotron {
-    color: white;
-}
-
 
 .card-grid {
     display: grid;

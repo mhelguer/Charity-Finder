@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CharityFinder.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\charity.jpg",
+      "PackagePath": "staticwebassets\\charity.jpg"
+    },
+    {
       "Id": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -243,6 +247,10 @@
     {
       "Id": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\wwwroot\\relief.jpg",
+      "PackagePath": "staticwebassets\\relief.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CharityFinder.Microsoft.AspNetCore.StaticWebAssets.props",
