@@ -19,11 +19,10 @@
 
     </div>
     @* contains all 3 sections of homepage *@
-    @* TODO: extend height to fit sections' content *@
     <div class="hero-container">
         
             <div class="hero-content">
-                <div class="hero-section bg-dark p-4 menu-section" style="background-color: blue;">
+                <div class="bg-dark p-4 menu-section" style="background-color: blue;">
                     @if (themeModelObj != null)
                     {
                         <form method="post" class="form-inline">
@@ -62,10 +61,25 @@
                         <p class="white-text">Could not load themes.</p>          
                     }
                 </div>
-                <div class="hero-section" style="background-color: green;">section with description, image and search bar
+                <div class="hero-section search-section">
+                <div class="search-left-side flex">
+                    <div class="search-description flex">
+                        <h1 style="font-size: 4rem">Make a difference.</h1>
+                        <p style="font-size: 32px;">Discover ways to support the causes you care about.</p>
                     </div>
-                    <div class="hero-section" style="background-color: purple;">section showing most popular charities
-                        </div>
+                    <div class="search-form">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search Charities" aria-label="Search">
+                            <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="search-image"><img id="charityImage" src="~/charity.jpg" alt="[IMG]" /> </div>
+                    
+                </div>
+                <div class="hero-section" style="background-color: purple;">
+                    section showing most popular charities
+                </div>
                 
             
         </div>
