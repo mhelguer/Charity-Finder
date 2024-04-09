@@ -20,68 +20,66 @@
     </div>
     @* contains all 3 sections of homepage *@
     <div class="hero-container">
-        
-            <div class="hero-content">
-                <div class="bg-dark p-4 menu-section" style="background-color: blue;">
-                    @if (themeModelObj != null)
-                    {
-                        <form method="post" class="form-inline">
-                            <div class="d-flex justify-content-around">
-                                <div class="text-center">
-                                    <label for="SelectedTheme" class="d-block text-left text-white">Select a theme:</label>
-                                    <select id="SelectedTheme" name="SelectedTheme" class="form-control">
-                                        <option value="Any">Any</option>
-                                        @foreach (var theme in themeModelObj.Themes.Theme)
-                                        {
-                                            <option value="@theme.Id">@theme.Name</option>
-                                        }
-                                    </select>
-                                </div>
+        <div class="hero-content">
+            <div class="bg-dark p-4 menu-section" style="background-color: blue;">
+                @if (themeModelObj != null)
+                {
+                    <form method="post" class="form-inline">
+                        <div class="d-flex justify-content-around">
+                            <div class="text-center">
+                                <label for="SelectedTheme" class="d-block text-left text-white">Select a theme:</label>
+                                <select id="SelectedTheme" name="SelectedTheme" class="form-control">
+                                    <option value="Any">Any</option>
+                                    @foreach (var theme in themeModelObj.Themes.Theme)
+                                    {
+                                        <option value="@theme.Id">@theme.Name</option>
+                                    }
+                                </select>
+                            </div>
                     
-                                <div class="text-center">
-                                    <label for="SelectedRegion" class="d-block text-left text-white">Select a region:</label>
-                                    <select id="SelectedRegion" name="SelectedRegion" class="form-control">
-                                        <option value="Any">Any</option>
-                                        <option value="Africa">Africa</option>
-                                        <option value="Asia and Oceania">Asia and Oceania</option>
-                                        <option value="Europe and Russia">Europe and Russia</option>
-                                        <option value="Middle East">Middle East</option>
-                                        <option value="North America">North America</option>
-                                        <option value="South/Central America and the Caribbean">South/Central America and the Caribbean</option>                            
-                                    </select>
-                                </div>
+                            <div class="text-center">
+                                <label for="SelectedRegion" class="d-block text-left text-white">Select a region:</label>
+                                <select id="SelectedRegion" name="SelectedRegion" class="form-control">
+                                    <option value="Any">Any</option>
+                                    <option value="Africa">Africa</option>
+                                    <option value="Asia and Oceania">Asia and Oceania</option>
+                                    <option value="Europe and Russia">Europe and Russia</option>
+                                    <option value="Middle East">Middle East</option>
+                                    <option value="North America">North America</option>
+                                    <option value="South/Central America and the Caribbean">South/Central America and the Caribbean</option>                            
+                                </select>
                             </div>
-                            <div class="text-center mt-3">
-                                <input type="submit" value="Submit" class="btn btn-primary" />
-                            </div>
-                        </form>
-                    }
-                    else
-                    {
-                        <p class="white-text">Could not load themes.</p>          
-                    }
-                </div>
-                <div class="hero-section search-section">
+                        </div>
+                        <div class="text-center mt-3">
+                            <input type="submit" value="Submit" class="btn menu-btn btn-primary" />
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <p class="white-text">Could not load themes.</p>          
+                }
+            </div>
+
+            <div class="hero-section search-section">
                 <div class="search-left-side flex">
                     <div class="search-description flex">
                         <h1 style="font-size: 4rem">Make a difference.</h1>
                         <p style="font-size: 32px;">Discover ways to support the causes you care about.</p>
                     </div>
                     <div class="search-form">
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search Charities" aria-label="Search">
+                            <form method="post" class="d-flex">
+                            <input class="form-control me-2 search" type="search" placeholder="Search Charities" aria-label="Search" name="SearchString" required="true">
                             <button class="btn btn-outline-success search-btn" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
                 <div class="search-image"><img id="charityImage" src="~/charity.jpg" alt="[IMG]" /> </div>
-                    
-                </div>
-                <div class="hero-section" style="background-color: purple;">
-                    section showing most popular charities
-                </div>
-                
-            
+            </div>
+
+            <div class="hero-section" style="background-color: purple;">
+                section showing most popular charities
+            </div>
         </div>
     </div>
 </div>

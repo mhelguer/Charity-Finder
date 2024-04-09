@@ -32,44 +32,62 @@ namespace CharityFinder.Pages
         [BindProperty]
         public string SelectedRegion { get; set; }
 
+        [BindProperty]
+        public string SearchString { get; set; }
+
+
         public async Task<IActionResult> OnPost()
         {
-            string selectedTheme = SelectedTheme;
-            string selectedRegion = SelectedRegion;
-
-            // search for random projects
-            if (selectedTheme == "Any" && selectedRegion == "Any")
+            if (Request.Form.ContainsKey("SearchString"))
             {
-                // get charities and store as string in session
-                var apiResponse = await _apiClient.GetAnyData();
+                string searchString = SearchString;
+
+                var apiResponse = await _apiClient.GetDataBySearch(searchString);
                 CharitiesObj = _charityService.GetCharities(apiResponse);
                 var jsonString = JsonConvert.SerializeObject(CharitiesObj);
                 _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
             }
-            // search based on only theme
-            else if (selectedTheme != "Any" && selectedRegion == "Any")
+            else if (Request.Form.ContainsKey("SelectedTheme"))
             {
-                var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
-                CharitiesObj = _charityService.GetCharities(apiResponse);
-                TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
-            }
-            // search when only region is chosen, or when theme and region is chosen (same method)
-            else
-            {
-                if (selectedTheme == "Any")
+                string selectedTheme = SelectedTheme;
+                string selectedRegion = SelectedRegion;
+
+                // search for random projects
+                if (selectedTheme == "Any" && selectedRegion == "Any")
                 {
-                    var apiResponse = await _apiClient.GetDataBySearch(selectedRegion);
+                    // get charities and store as string in session
+                    var apiResponse = await _apiClient.GetAnyData();
                     CharitiesObj = _charityService.GetCharities(apiResponse);
-                    TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
+                    var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+                    _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
                 }
+                // search based on only theme
+                else if (selectedTheme != "Any" && selectedRegion == "Any")
+                {
+                    var apiResponse = await _apiClient.GetDataByTheme(selectedTheme);   // result is string
+                    CharitiesObj = _charityService.GetCharities(apiResponse);
+                    var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+                    _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
+                }
+                // search when only region is chosen, or when theme and region is chosen (same method)
                 else
                 {
-                    var apiResponse = await _apiClient.GetDataBySearch(selectedRegion, selectedTheme);
-                    CharitiesObj = _charityService.GetCharities(apiResponse);
-                    TempData["CharitiesObj"] = JsonConvert.SerializeObject(CharitiesObj);
+                    if (selectedTheme == "Any")
+                    {
+                        var apiResponse = await _apiClient.GetDataBySearch(selectedRegion);
+                        CharitiesObj = _charityService.GetCharities(apiResponse);
+                        var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+                        _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
+                    }
+                    else
+                    {
+                        var apiResponse = await _apiClient.GetDataBySearch(selectedRegion, selectedTheme);
+                        CharitiesObj = _charityService.GetCharities(apiResponse);
+                        var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+                        _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
+                    }
                 }
             }
-
             return RedirectToPage("/Results");
 
         }

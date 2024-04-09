@@ -16,6 +16,10 @@ namespace CharityFinder.Pages
                 CharitiesObj = JsonConvert.DeserializeObject<List<Charity>>(jsonString);
                 ViewData["CharitiesObj"] = CharitiesObj;
             }
+            else
+            {
+
+            }
         }
     }
 }

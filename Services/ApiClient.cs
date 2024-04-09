@@ -52,8 +52,8 @@ namespace CharityFinder.Services
             string operation = $"/public/services/search/projects";
             string queryString = $"?api_key={apiKey}&q={selectedRegion}+{selectedTheme}";
             string url = $"{baseUri}{operation}{queryString}";
-            Console.WriteLine(url + ".");
             HttpResponseMessage response = await _httpClient.GetAsync(url);
+
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadAsStringAsync();
