@@ -6,7 +6,6 @@
 @{
     ViewData["Title"] = "Charity Finder";
     var CharitiesObj = ViewData["CharitiesObj"] as List<Charity>;
-
 }
 
 <div class="main-content text-center bg-dark">
@@ -20,6 +19,7 @@
     <div class="bg-dark p-4 results">
         @if (CharitiesObj != null)
         {
+
             <div class="card-grid">
                 @foreach (Charity charity in CharitiesObj)
                 {
@@ -35,6 +35,7 @@
                 }
             </div>
         }
+        @* TODO: execute else if CharitiesObj.Count == 0 *@
         else
         {
             <p class="white-text">NO CHARITIES</p>
