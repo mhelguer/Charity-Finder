@@ -17,15 +17,19 @@ namespace CharityFinder.Services
 
         public List<Charity> GetCharities(string apiResponse)
         {
+            Console.WriteLine("IN GET CHARITIES");
             List<Charity> charities = new List<Charity>();
 
             // deserialize xml string into list of Charity objects
             using (StringReader reader = new StringReader(apiResponse))
             {
+
                 XDocument doc = XDocument.Load(reader);
 
+                // TODO: get all themes for each charity to display in their card above description
                 foreach (XElement projectElement in doc.Descendants("project"))
                 {
+
                     Charity charity = new Charity();
 
                     // getting Name
@@ -35,12 +39,23 @@ namespace CharityFinder.Services
                     charity.Summary = (string)projectElement.Element("summary");
 
                     // HomeCountry
-                    charity.HomeCountry = (string)projectElement.Element("organization")
+                    charity.HomeCountry = (string)projectElement.Element("countries")
                         ?.Element("country")
                         ?.Element("name");
 
+
                     // Url
                     charity.Url = (string)projectElement.Element("organization")?.Element("url");
+
+                    // Themes
+                    List<string> themes = new List<string>();
+
+                    foreach (XElement themeElement in projectElement.Element("organization").Element("themes").Elements("theme"))
+                    {
+                        string themeName = (string)themeElement.Element("name");
+                        themes.Add(themeName);
+                    }
+                    charity.RelatedThemes = themes;
 
                     // add charity to list of charities
                     charities.Add(charity);

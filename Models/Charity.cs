@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Security.Policy;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
@@ -13,12 +14,12 @@ namespace CharityFinder.Models
         [XmlElement("summary")]
         public string Summary { get; set; }
 
-        [XmlArray("countries")]
-        [XmlArrayItem("country")]
-        public List<string> CountriesServed { get; set; }
-
         [XmlElement("contactCountry")]
         public string HomeCountry { get; set; }
+
+
+        [XmlElement("relatedThemes")]
+        public List<string> RelatedThemes { get; set; }
 
         [XmlElement("url")]
         public string Url { get; set; }
