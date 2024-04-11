@@ -168,6 +168,69 @@ main {
     overflow: hidden;
 }
 
+.charity-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.charity-card {
+    flex: 0 0 calc(50% - 10px);
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    border: 10px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.charity-name {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 10px;
+    flex: 1;
+    color: white;
+    background-color: #258cfb
+}
+
+.charity-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.theme-oval {
+    background-color: rgb(0, 90, 0);
+    color: #fff;
+    border-radius: 999px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+
+/* TODO: set background color and round borders*/
+.charity-summary {
+    flex: 1;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 21px;
+    text-align: left;
+    background-color: #258cfb;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.charity-url {
+    
+}
+
+    .charity-url:hover {
+        background-color: rgb();
+    }
+
 footer {
     background-color: gray;
     text-align: center;
