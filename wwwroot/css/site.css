@@ -35,7 +35,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 60vh;
-    background-color: darkorange;
+    background-color: rgb(12, 51, 131);
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -182,6 +182,7 @@ main {
     position: relative;
     border: 10px solid #ccc;
     padding: 20px;
+    padding-bottom: 50px;
     margin-bottom: 20px;
     box-sizing: border-box;
 }
@@ -191,8 +192,8 @@ main {
     font-size: 48px;
     margin-bottom: 10px;
     flex: 1;
-    color: white;
-    background-color: #258cfb
+    color: #258cfb;
+    background-color: white;
 }
 
 .charity-themes {
@@ -200,6 +201,9 @@ main {
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .theme-oval {
@@ -211,20 +215,29 @@ main {
 }
 
 
-/* TODO: set background color and round borders*/
 .charity-summary {
     flex: 1;
     margin-bottom: 10px;
     color: white;
-    font-size: 21px;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
     text-align: left;
-    background-color: #258cfb;
+    background-color: rgb(12, 51, 131);
     border-radius: 5px;
     padding: 10px;
 }
 
 .charity-url {
-    
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'sans-serif';
 }
 
     .charity-url:hover {

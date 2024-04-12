@@ -109,7 +109,6 @@ namespace CharityFinder.Services
             string operation = $"/public/projectservice/themes/{selectedTheme}";
             string queryString = $"api_key={apiKey}";
             string url = $"{baseUri}{operation}/projects/active/summary?api_key={apiKey}";
-            Console.WriteLine(url);
 
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
