@@ -45,7 +45,6 @@ namespace CharityFinder.Pages
                 var apiResponse = await _apiClient.GetDataBySearch(searchString);
                 CharitiesObj = _charityService.GetCharities(apiResponse);
                 var jsonString = JsonConvert.SerializeObject(CharitiesObj);
-                //Console.WriteLine(CharitiesObj);                
                 _httpContextAccessor.HttpContext.Session.SetString("CharitiesObj", jsonString);
             }
             else if (Request.Form.ContainsKey("SelectedTheme"))

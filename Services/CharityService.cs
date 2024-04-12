@@ -17,7 +17,6 @@ namespace CharityFinder.Services
 
         public List<Charity> GetCharities(string apiResponse)
         {
-            Console.WriteLine("IN GET CHARITIES");
             List<Charity> charities = new List<Charity>();
 
             // deserialize xml string into list of Charity objects
@@ -26,7 +25,6 @@ namespace CharityFinder.Services
 
                 XDocument doc = XDocument.Load(reader);
 
-                // TODO: get all themes for each charity to display in their card above description
                 foreach (XElement projectElement in doc.Descendants("project"))
                 {
 
