@@ -168,6 +168,60 @@ main {
     overflow: hidden;
 }
 
+.featured-section {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.sliding-charity-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    overflow-y: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    top: auto;
+}
+
+.sliding-charity-card {
+    flex: 0 0 40rem;
+    width: 300px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid #ccc;
+    padding: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+
+.sliding-charity-themes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sliding-charity-summary {
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sliding-charity-url {
+    display: block;
+    margin-top: 10px;
+}
+
 .charity-cards {
     display: flex;
     flex-wrap: wrap;
@@ -187,6 +241,7 @@ main {
     box-sizing: border-box;
 }
 
+/*TODO: make name wrap if overflow*/
 .charity-name {
     font-weight: bold;
     font-size: 48px;
@@ -194,6 +249,25 @@ main {
     flex: 1;
     color: #258cfb;
     background-color: white;
+    padding: 5px 10px;
+    height: auto;
+    display: inline-block;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+#sliding-charity-name {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 10px;
+    flex: 1;
+    color: #258cfb;
+    background-color: white;
+    padding: 5px 10px;
+    height: auto;
+    display: inline-block;
+    line-height: 1.2;
+    overflow-wrap: break-word;
 }
 
 .charity-themes {
@@ -237,7 +311,7 @@ main {
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'sans-serif';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
     .charity-url:hover {

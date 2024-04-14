@@ -6,6 +6,8 @@
 @{
     ViewData["Title"] = "Charity Finder";
     var themeModelObj = ViewData["ThemeModelObj"] as ThemeModel;
+    var charitiesObj = ViewData["CharitiesObj"] as List<Charity>;
+
 
 }
 
@@ -75,12 +77,37 @@
                 <div class="search-image"><img id="charityImage" src="~/charity.jpg" alt="[IMG]" /> </div>
             </div>
 
-            <div class="hero-section" style="background-color: purple;">
-                section showing most popular charities
+            <div class="hero-section featured-section" style="background-color: purple;">
+                <div class="sliding-charity-cards">
+                    @foreach (Charity charity in charitiesObj)
+                    {
+                        <div class="sliding-charity-card">
+                            <div  id="sliding-charity-name">@charity.Name</div>
+                            <div class="sliding-charity-themes">
+                                @foreach (var theme in charity.RelatedThemes)
+                                {
+                                    <div class="theme-oval">@theme</div>
+                                }
+                            </div>
+                            <div class="sliding-charity-summary">@charity.Summary</div>
+                            <a href="@charity.Url" class="btn btn-primary sliding-charity-url">Visit Website</a>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContendLoaded', function () {
+        const cardsContainer = document.querySelector('.sliding-charity-cards');
+        cardsContainer.addEventListener('scroll'), function () {
+            cardsContainer.scrollLeft += 1;
+        });
+    });
+</script>
 
 
 
