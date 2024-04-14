@@ -96,6 +96,8 @@ namespace CharityFinder.Pages
         {
             await InitializeThemeModel();
             ViewData["ThemeModelObj"] = ThemeModelObj;
+            await InitializeFeaturedCharities();
+            ViewData["CharitiesObj"] = CharitiesObj;
         }
 
 
@@ -138,6 +140,17 @@ namespace CharityFinder.Pages
                 }
             }
         }
+
+        // TODO: retrieve 5 featured charities to display on homepage
+        // https://www.globalgiving.org/api/methods/get-featured-projects-summary/
+        private async Task InitializeFeaturedCharities()
+        {
+
+
+            var apiResponse = await _apiClient.GetFeaturedCharities();
+            CharitiesObj = _charityService.GetCharities(apiResponse);
+            var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+
+        }
     }
 }
-

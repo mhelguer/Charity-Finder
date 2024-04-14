@@ -17,6 +17,28 @@ namespace CharityFinder.Services
             _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
 
+        public async Task<string> GetFeaturedCharities()
+        {
+            // API Key
+            string apiKey = "610ee8f9-bb17-4a64-97f6-99fb66929a19";
+
+            // URL
+            string baseUrl = "https://api.globalgiving.org/api";
+            string operation = "/public/projectservice/featured/projects/summary";
+            string queryString = $"?api_key={apiKey}";
+            string url = baseUrl + operation + queryString;
+
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+
+            }
+            else
+            {
+                return $"Error: {response.StatusCode}";
+            }
+        }
         public async Task<string> GetDataByTheme(string selectedTheme)
         {
             // API Key
