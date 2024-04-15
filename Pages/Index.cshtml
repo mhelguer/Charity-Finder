@@ -81,11 +81,15 @@
                 <div class="featured-title">
                     <h1 style="font-size: 4rem;">Popular Charities</h1>
                 </div>        
+                <div class="buttons">
+                    <button class="scroll-button prev-button">Previous</button>
+                    <button class="scroll-button next-button">Next</button>
+                </div>
                 <div class="sliding-charity-cards">
                     @foreach (Charity charity in charitiesObj)
                     {
                         <div class="sliding-charity-card">
-                            <div  class="sliding-charity-name">@charity.Name</div>
+                            <div class="sliding-charity-name">@((charity.Name.Length > 49) ? charity.Name.Substring(0, 49) : charity.Name)</div>
                             <div class="sliding-charity-themes">
                                 @foreach (var theme in charity.RelatedThemes)
                                 {
@@ -97,10 +101,7 @@
                         </div>
                     }
                 </div> 
-                <div class="buttons">
-                    <button class="scroll-button prev-button">Previous</button>
-                    <button class="scroll-button next-button">Next</button>
-                </div>
+                
             </div>
         </div>
     </div>

@@ -175,7 +175,9 @@ main {
     position: relative;
     overflow-x: hidden;
     background-color: #36454F;
-    height: 60rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .featured-title {
@@ -196,14 +198,14 @@ main {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: auto;
-    top: auto;
+    bottom: 2rem;
+    top: 5rem
 }
 
 .sliding-charity-card {
     flex-direction: column;
     flex: 0 0 40rem;
-    width: 300px;
+    width: 400px;
     margin-right: 20px;
     scroll-snap-align: start;
     border: 10px solid #ccc;
@@ -231,6 +233,7 @@ main {
 .sliding-charity-themes {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .sliding-charity-summary {
@@ -271,6 +274,8 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     width: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 .next-button {
