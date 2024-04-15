@@ -171,9 +171,9 @@ main {
 .featured-section {
     max-width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
     position: relative;
     overflow-x: hidden;
+    background-color: #36454F;
 }
 
 .sliding-charity-cards {
@@ -191,19 +191,32 @@ main {
 }
 
 .sliding-charity-card {
+    flex-direction: column;
     flex: 0 0 40rem;
     width: 300px;
     margin-right: 20px;
     scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
     border: 10px solid #ccc;
     padding: 20px;
     padding-bottom: 50px;
+    position: relative;
     margin-bottom: 20px;
     box-sizing: border-box;
 }
 
+.sliding-charity-name {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #258cfb;
+    background-color: white;
+    padding: 5px 10px;
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
 
 .sliding-charity-themes {
     display: flex;
@@ -214,12 +227,20 @@ main {
     margin-top: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    margin-bottom: 20px !important;
 }
 
 .sliding-charity-url {
-    display: block;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 40px;
 }
 
 .charity-cards {
@@ -241,7 +262,6 @@ main {
     box-sizing: border-box;
 }
 
-/*TODO: make name wrap if overflow*/
 .charity-name {
     font-weight: bold;
     font-size: 48px;
@@ -251,24 +271,12 @@ main {
     background-color: white;
     padding: 5px 10px;
     height: auto;
+    width: 100%;
     display: inline-block;
     line-height: 1.2;
     overflow-wrap: break-word;
 }
 
-#sliding-charity-name {
-    font-weight: bold;
-    font-size: 48px;
-    margin-bottom: 10px;
-    flex: 1;
-    color: #258cfb;
-    background-color: white;
-    padding: 5px 10px;
-    height: auto;
-    display: inline-block;
-    line-height: 1.2;
-    overflow-wrap: break-word;
-}
 
 .charity-themes {
     display: flex;
