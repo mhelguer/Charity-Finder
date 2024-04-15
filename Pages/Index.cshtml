@@ -77,19 +77,19 @@
                 <div class="search-image"><img id="charityImage" src="~/charity.jpg" alt="[IMG]" /> </div>
             </div>
 
-            <div class="hero-section featured-section" style="background-color: purple;">
+            <div class="hero-section featured-section">
                 <div class="sliding-charity-cards">
                     @foreach (Charity charity in charitiesObj)
                     {
                         <div class="sliding-charity-card">
-                            <div  id="sliding-charity-name">@charity.Name</div>
+                            <div  class="sliding-charity-name">@charity.Name</div>
                             <div class="sliding-charity-themes">
                                 @foreach (var theme in charity.RelatedThemes)
                                 {
                                     <div class="theme-oval">@theme</div>
                                 }
                             </div>
-                            <div class="sliding-charity-summary">@charity.Summary</div>
+                            <div class="charity-summary sliding-charity-summary">@charity.Summary</div>
                             <a href="@charity.Url" class="btn btn-primary sliding-charity-url">Visit Website</a>
                         </div>
                     }
