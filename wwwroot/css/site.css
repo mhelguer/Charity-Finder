@@ -103,6 +103,7 @@ main {
 
 .search-section {
     background-color: rgb(2, 18, 64);
+    height: 70rem;
 }
 
 .search-left-side {
@@ -174,11 +175,20 @@ main {
     position: relative;
     overflow-x: hidden;
     background-color: #36454F;
+    height: 60rem;
+}
+
+.featured-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    font-family: 'Oswald';
 }
 
 .sliding-charity-cards {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 20px 0;
@@ -242,6 +252,40 @@ main {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 40px;
 }
+
+.buttons {
+    width: 15%;
+    height: 4rem;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    gap: 20px;
+}
+
+.scroll-button {
+    top: 45px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.next-button {
+    right: 0;
+}
+
+.prev-button {
+    left: auto;
+    right: 100px;
+}
+
+    .next-button:hover,
+    .prev-button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
 
 .charity-cards {
     display: flex;
