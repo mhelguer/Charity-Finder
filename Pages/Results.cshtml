@@ -8,7 +8,27 @@
     var CharitiesObj = ViewData["CharitiesObj"] as List<Charity>;
 }
 
-<div class="main-content text-center bg-dark">
+<nav class="navbar bg-secondary navbar-fixed navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Charity Finder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Index#search-section">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Index#featured-section">Featured Charities</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main-content results-page flex text-center bg-dark">
     <div class="jumbotron">
         <h1 class="display-4" style="font-family: 'Oswald';">Charity Finder</h1>
         <p class="lead">Discover the right destination for your donation!</p>
@@ -17,15 +37,18 @@
     </div>
 
     <div class="bg-dark p-4 results">
-        @if (CharitiesObj != null)
+        @if (CharitiesObj == null || CharitiesObj.Count == 0)
         {
-
-            <div class="charity-cards">
+            <p class="white-text" style="font-size: 15rem;">NO CHARITIES</p>
+        }
+        else
+        {
+            <div class="charity-cards flex">
                 @foreach (Charity charity in CharitiesObj)
                 {
                     <div class="charity-card">
                         <div class="charity-name">@charity.Name</div>
-                        <div class="charity-themes">
+                        <div class="charity-themes flex">
                             @foreach (var theme in charity.RelatedThemes)
                             {
                                 <div class="theme-oval">@theme</div>
@@ -36,10 +59,7 @@
                     </div>
                 }
             </div>
-        }
-        else
-        {
-            <p class="white-text">NO CHARITIES</p>
+            
         }
     </div>
 </div>

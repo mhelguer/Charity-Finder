@@ -11,16 +11,36 @@
 
 }
 
-<div class="main-content text-center bg-dark">
+<nav class="navbar navbar-fixed navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Charity Finder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#search-section">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featured-section">Featured Charities</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main-content flex text-center bg-dark">
 
     <div class="jumbotron">
         <h1 class="display-4" style="font-family: 'Oswald';">Charity Finder</h1>
         <p class="lead">Discover the right destination for your donation!</p>
 
     </div>
-    @* contains all 3 sections of homepage *@
-    <div class="hero-container">
-        <div class="hero-content">
+
+    <div class="hero-container flex">
+        <div class="hero-content flex">
             <div class="bg-dark p-4 menu-section" style="background-color: blue;">
                 @if (themeModelObj != null)
                 {
@@ -61,7 +81,7 @@
                 }
             </div>
 
-            <div class="hero-section search-section">
+            <div id="search-section" class="hero-section flex search-section">
                 <div class="search-left-side flex">
                     <div class="search-description flex">
                         <h1 style="font-size: 4rem">Make a difference.</h1>
@@ -77,20 +97,20 @@
                 <div class="search-image"><img id="charityImage" src="~/charity.jpg" alt="[IMG]" /> </div>
             </div>
 
-            <div class="hero-section featured-section">
+            <div id="featured-section" class="hero-section flex featured-section">
                 <div class="featured-title">
                     <h1 style="font-size: 4rem;">Popular Charities</h1>
                 </div>        
-                <div class="buttons">
-                    <button class="scroll-button prev-button">Previous</button>
-                    <button class="scroll-button next-button">Next</button>
+                <div class="scroll-buttons">
+                    <button class="scroll-button prev-button btn">Previous</button>
+                    <button class="scroll-button next-button btn">Next</button>
                 </div>
-                <div class="sliding-charity-cards">
+                <div class="sliding-charity-cards flex">
                     @foreach (Charity charity in charitiesObj)
                     {
                         <div class="sliding-charity-card">
                             <div class="sliding-charity-name">@((charity.Name.Length > 49) ? charity.Name.Substring(0, 49) : charity.Name)</div>
-                            <div class="sliding-charity-themes">
+                            <div class="sliding-charity-themes flex">
                                 @foreach (var theme in charity.RelatedThemes)
                                 {
                                     <div class="theme-oval">@theme</div>
@@ -101,7 +121,6 @@
                         </div>
                     }
                 </div> 
-                
             </div>
         </div>
     </div>
@@ -140,13 +159,3 @@
         });
     })
 </script>
-
-
-
-
-
-
-
-
-
-
