@@ -1,13 +1,8 @@
-using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Newtonsoft.Json;
-using System;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using CharityFinder.Models;
 using CharityFinder.Services;
-using Microsoft.AspNetCore.Http;
 
 namespace CharityFinder.Pages
 {
@@ -141,8 +136,6 @@ namespace CharityFinder.Pages
             }
         }
 
-        // TODO: retrieve 5 featured charities to display on homepage
-        // https://www.globalgiving.org/api/methods/get-featured-projects-summary/
         private async Task InitializeFeaturedCharities()
         {
 
