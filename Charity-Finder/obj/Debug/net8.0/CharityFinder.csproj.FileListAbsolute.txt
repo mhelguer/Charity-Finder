@@ -757,6 +757,7 @@ C:\Users\Miguel\source\repos\Charity-Finder\obj\Debug\net8.0\refint\CharityFinde
 C:\Users\Miguel\source\repos\Charity-Finder\obj\Debug\net8.0\CharityFinder.pdb
 C:\Users\Miguel\source\repos\Charity-Finder\obj\Debug\net8.0\CharityFinder.genruntimeconfig.cache
 C:\Users\Miguel\source\repos\Charity-Finder\obj\Debug\net8.0\ref\CharityFinder.dll
+<<<<<<< HEAD
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\bin\Debug\net8.0\appsettings.json
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\bin\Debug\net8.0\CharityFinder.staticwebassets.runtime.json
@@ -1009,3 +1010,5 @@ C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\refi
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\CharityFinder.pdb
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\CharityFinder.genruntimeconfig.cache
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\ref\CharityFinder.dll
+=======
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72

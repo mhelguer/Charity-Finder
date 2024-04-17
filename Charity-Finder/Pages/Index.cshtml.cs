@@ -104,8 +104,13 @@ namespace CharityFinder.Pages
             // URL
             string baseUri = "https://api.globalgiving.org/api";
             string operation = "/public/projectservice/themes";
+<<<<<<< HEAD
             string apiString = $"?api_key={apiKey}";
             string url = $"{baseUri}{operation}{apiString}";
+=======
+            string queryString = $"api_key={apiKey}";
+            string url = $"{baseUri}{operation}?{queryString}";
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
 
             // Create HttpClient
             using (HttpClient client = new HttpClient())
@@ -120,7 +125,10 @@ namespace CharityFinder.Pages
                     try
                     {
                         string jsonContent = await response.Content.ReadAsStringAsync();
+<<<<<<< HEAD
                         Console.WriteLine(jsonContent);
+=======
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
                         ThemeModelObj = JsonConvert.DeserializeObject<ThemeModel>(jsonContent);
 
                     }
@@ -139,9 +147,18 @@ namespace CharityFinder.Pages
 
         private async Task InitializeFeaturedCharities()
         {
+<<<<<<< HEAD
             var apiResponse = await _apiClient.GetFeaturedCharities();
             CharitiesObj = _charityService.GetCharities(apiResponse);
             var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+=======
+
+
+            var apiResponse = await _apiClient.GetFeaturedCharities();
+            CharitiesObj = _charityService.GetCharities(apiResponse);
+            var jsonString = JsonConvert.SerializeObject(CharitiesObj);
+
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
         }
     }
 }
