@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj": {}
+    "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj": {
+    "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj",
         "projectName": "CharityFinder",
-        "projectPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj",
+        "projectPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj",
         "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\obj\\",
+        "outputPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",

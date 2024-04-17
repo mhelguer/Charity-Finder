@@ -5513,11 +5513,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "C:\\Users\\Miguel\\source\\repos\\UnitTests\\UnitTests.csproj",
+      "projectPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\UnitTests\\UnitTests.csproj",
       "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel\\source\\repos\\UnitTests\\obj\\",
+      "outputPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
