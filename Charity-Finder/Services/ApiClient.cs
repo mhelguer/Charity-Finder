@@ -46,9 +46,15 @@ namespace CharityFinder.Services
 
             // URL
             string baseUri = "https://api.globalgiving.org/api";
+<<<<<<< HEAD
+            string operation = $"/public/projectservice/themes/{selectedTheme}/projects/active/summary";
+            string apiString = $"?api_key={apiKey}";
+            string url = $"{baseUri}{operation}{apiString}";
+=======
             string operation = $"/public/projectservice/themes/{selectedTheme}";
             string queryString = $"api_key={apiKey}";
             string url = $"{baseUri}{operation}/projects/active/summary?api_key={apiKey}";
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
 
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
@@ -128,9 +134,15 @@ namespace CharityFinder.Services
 
             // URL
             string baseUri = "https://api.globalgiving.org/api";
+<<<<<<< HEAD
+            string operation = $"/public/projectservice/themes/{selectedTheme}/projects/active/summary";
+            string apiString = $"?api_key={apiKey}";
+            string url = $"{baseUri}{operation}{apiString}";
+=======
             string operation = $"/public/projectservice/themes/{selectedTheme}";
             string queryString = $"api_key={apiKey}";
             string url = $"{baseUri}{operation}/projects/active/summary?api_key={apiKey}";
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
 
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)

@@ -7885,11 +7885,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj",
+      "projectName": "CharityFinder",
+      "projectPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj",
+      "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj",
       "projectName": "CharityFinder",
       "projectPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj",
       "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\obj\\",
+>>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
