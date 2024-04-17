@@ -1,0 +1,15 @@
+RazorPages/
+
+
+RazorPagesMoviefail/
+
+
+TodoApi/
+
+
+Tutorial/
+
+
+tmp/
+
+Charity-Finder/.vs
