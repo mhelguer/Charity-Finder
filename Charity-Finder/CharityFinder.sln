@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34607.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharityFinder", "CharityFinder.csproj", "{0578A592-60E5-452C-A067-40A013940D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{EF755ED9-F68F-46DE-909A-E255246D2FE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0578A592-60E5-452C-A067-40A013940D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0578A592-60E5-452C-A067-40A013940D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0578A592-60E5-452C-A067-40A013940D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0578A592-60E5-452C-A067-40A013940D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF755ED9-F68F-46DE-909A-E255246D2FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF755ED9-F68F-46DE-909A-E255246D2FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF755ED9-F68F-46DE-909A-E255246D2FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF755ED9-F68F-46DE-909A-E255246D2FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EC3C987-25C2-4F2F-9E43-3639C1104CB4}
+	EndGlobalSection
+EndGlobal
