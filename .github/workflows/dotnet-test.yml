@@ -13,11 +13,11 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "8.0.201"
-      - name: Debug
-        working-directory: ./Charity-Finder
-        run: |
 
+      - name: Debug
+        working-directory: ./UnitTests
+        run: |
           pwd
           ls -la
 
-      - run: dotnet test
+      - run: dotnet test ./UnitTests/UnitTests.csproj
