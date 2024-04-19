@@ -200,3 +200,4 @@ C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\UnitTests
 C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\ref\UnitTests.dll
 =======
 >>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
+C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\UnitTests.sourcelink.json
