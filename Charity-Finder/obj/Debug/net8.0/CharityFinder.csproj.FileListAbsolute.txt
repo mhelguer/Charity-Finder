@@ -1012,3 +1012,4 @@ C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\Char
 C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\ref\CharityFinder.dll
 =======
 >>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
+C:\Users\Miguel\source\repos\Charity-Finder\Charity-Finder\obj\Debug\net8.0\CharityFinder.sourcelink.json

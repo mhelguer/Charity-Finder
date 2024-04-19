@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "DFQPOcNi6b7cbAr7PW7Zero3SSKOdprygMoRp8Zrq1IQ/tYjdJKRAlMKdc8P6hP5VwEUQxD48ftwfCMky1g63w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\Charity-Finder\\CharityFinder.csproj",
-=======
-  "dgSpecHash": "8UK72qPbSpACKy8mjhaPuYjCbHEhKBUWGrj8MOXOM0s1lxv7QCD/jyx6sonz1uyCtE73T7pe43b9Z69GRUvEVQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\source\\repos\\Charity-Finder\\CharityFinder.csproj",
->>>>>>> b47e0abc818c6264b5908880c450c08e596bea72
   "expectedPackageFiles": [
     "C:\\Users\\Miguel\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
