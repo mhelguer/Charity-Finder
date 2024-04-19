@@ -17,6 +17,11 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
+      - name: Debug
+        run: |
+          pwd
+          ls -la
+
       - name: Build
         working-directory: ./Charity-Finder
         run: |
