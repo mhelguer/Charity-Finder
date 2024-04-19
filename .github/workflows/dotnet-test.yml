@@ -20,13 +20,4 @@ jobs:
           pwd
           ls -la
 
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        working-directory: ./Charity-Finder
-        run: |
-          dotnet build CharityFinder.csproj --configuration Release --no-restore
-
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal
+      - run: dotnet test
