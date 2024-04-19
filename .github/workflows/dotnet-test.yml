@@ -13,14 +13,13 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "8.0.201"
-
-      - name: Restore dependencies
-        run: dotnet restore
-
       - name: Debug
         run: |
           pwd
           ls -la
+
+      - name: Restore dependencies
+        run: dotnet restore
 
       - name: Build
         working-directory: ./Charity-Finder
