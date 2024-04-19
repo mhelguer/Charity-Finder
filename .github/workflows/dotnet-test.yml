@@ -14,7 +14,9 @@ jobs:
         with:
           dotnet-version: "8.0.201"
       - name: Debug
+        working-directory: ./Charity-Finder
         run: |
+
           pwd
           ls -la
 
