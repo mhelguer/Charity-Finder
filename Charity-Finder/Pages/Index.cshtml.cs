@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using CharityFinder.Models;
 using CharityFinder.Services;
+using NuGet.ContentModel;
 
 namespace CharityFinder.Pages
 {
@@ -11,7 +12,8 @@ namespace CharityFinder.Pages
         private readonly ApiClient _apiClient;
         private readonly CharityService _charityService;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public string Data { get; set; }
+        private readonly HttpClient _httpClient;
+
 
         public ThemeModel ThemeModelObj { get; set; }
         public List<Charity> CharitiesObj { get; set; }
@@ -108,31 +110,23 @@ namespace CharityFinder.Pages
             string url = $"{baseUri}{operation}{apiString}";
 
             // Create HttpClient
-            using (HttpClient client = new HttpClient())
+            try
             {
-                // Set Accept header
-                client.DefaultRequestHeaders.Add("Accept", "application/json");
-
-                // Make GET request
-                HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
+                // Create HttpClient
+                using (HttpClient client = new HttpClient())
                 {
-                    try
-                    {
-                        string jsonContent = await response.Content.ReadAsStringAsync();
-                        ThemeModelObj = JsonConvert.DeserializeObject<ThemeModel>(jsonContent);
+                    // Set Accept header
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                    }
-                    catch (JsonReaderException ex)
-                    {
-                        Console.WriteLine(ex);
-                        ThemeModelObj = null;
-                    }
+                    // Make GET request
+                    HttpResponseMessage response = await client.GetAsync(url);
                 }
-                else
-                {
-                    ThemeModelObj = null;
-                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error fetching themes: {ex.Message}");
+                ThemeModelObj = null;
             }
         }
 
