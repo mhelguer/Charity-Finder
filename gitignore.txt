@@ -1,0 +1,2 @@
+./Charity-Finder/.vs
+.vs/
