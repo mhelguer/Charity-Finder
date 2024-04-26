@@ -97,3 +97,4 @@ C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\refint\Un
 C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\UnitTests.pdb
 C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\UnitTests.genruntimeconfig.cache
 C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\ref\UnitTests.dll
+C:\Users\Miguel\source\repos\Charity-Finder\UnitTests\obj\Debug\net8.0\UnitTests.sourcelink.json
